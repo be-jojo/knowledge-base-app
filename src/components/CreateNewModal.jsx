@@ -29,11 +29,14 @@ const CreateNewModal = ({ isOpen, onClose }) => {
             <form className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Name <span className="text-gray-400">(Cannot be edited later)</span>
+                  Name{' '}
+                  <span className="text-gray-400">(Cannot be edited later)</span>
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
                   placeholder="Name"
+                  required
                   className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-700 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                 />
               </div>
@@ -48,8 +51,14 @@ const CreateNewModal = ({ isOpen, onClose }) => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Vector Store</label>
-                <select className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-700 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Vector Store<span className="text-red-500">*</span>
+                </label>
+                <select
+                  required
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-700 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                >
+                  <option value="">Select a vector store</option>
                   <option>Qdrant</option>
                   <option>Pinecone</option>
                   <option>Milvus</option>
@@ -57,8 +66,14 @@ const CreateNewModal = ({ isOpen, onClose }) => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">LLM Embedding Model</label>
-                <select className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-700 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  LLM Embedding Model<span className="text-red-500">*</span>
+                </label>
+                <select
+                  required
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-700 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+                >
+                  <option value="">Select an embedding model</option>
                   <option>text-embedding-ada-002</option>
                   <option>text-embedding-3-large</option>
                   <option>text-embedding-3-small</option>
