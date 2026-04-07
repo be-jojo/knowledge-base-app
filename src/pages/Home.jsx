@@ -3,59 +3,59 @@ import KnowledgeCard from '../components/KnowledgeCard';
 import PageHeader from '../components/PageHeader';
 import CreateNewModal from '../components/CreateNewModal';
 
+const knowledgeArticles = [
+  {
+    id: 1,
+    title: 'Getting Started with React',
+    description: 'Learn the basics of React including JSX, components, and hooks. This comprehensive guide will help you understand the fundamentals.  Learn about utility classes, components, and customization',
+    category: 'Getting Started',
+    date: '14/07/2025',
+    readTime: 8,
+  },
+  {
+    id: 2,
+    title: 'Tailwind CSS Best Practices',
+    description: 'Discover best practices for writing maintainable and scalable CSS using Tailwind. Learn about utility classes, components, and customization.',
+    category: 'Styling',
+    date: '14/07/2025',
+    readTime: 6,
+  },
+  {
+    id: 3,
+    title: 'State Management in React',
+    description: 'Explore different approaches to managing state in React applications. From useState to Context API and Redux patterns.',
+    category: 'Advanced',
+    date: '14/07/2025',
+    readTime: 12,
+  },
+  {
+    id: 4,
+    title: 'Building Responsive UIs',
+    description: 'Create responsive web applications that work seamlessly across all device sizes. Learn mobile-first design principles.',
+    category: 'Features',
+    date: '14/07/2025',
+    readTime: 10,
+  },
+  {
+    id: 5,
+    title: 'Performance Optimization',
+    description: 'Improve your React application performance using code splitting, lazy loading, and memoization techniques.',
+    category: 'Advanced',
+    date: '14/07/2025',
+    readTime: 9,
+  },
+  {
+    id: 6,
+    title: 'Component Testing',
+    description: 'Write robust tests for your React components using Jest and React Testing Library. Learn testing best practices.',
+    category: 'Testing',
+    date: '14/07/2025',
+    readTime: 11,
+  },
+];
+
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const knowledgeArticles = [
-    {
-      id: 1,
-      title: 'Getting Started with React',
-      description: 'Learn the basics of React including JSX, components, and hooks. This comprehensive guide will help you understand the fundamentals.  Learn about utility classes, components, and customization',
-      category: 'Getting Started',
-      date: '14/07/2025',
-      readTime: 8,
-    },
-    {
-      id: 2,
-      title: 'Tailwind CSS Best Practices',
-      description: 'Discover best practices for writing maintainable and scalable CSS using Tailwind. Learn about utility classes, components, and customization.',
-      category: 'Styling',
-      date: '14/07/2025',
-      readTime: 6,
-    },
-    {
-      id: 3,
-      title: 'State Management in React',
-      description: 'Explore different approaches to managing state in React applications. From useState to Context API and Redux patterns.',
-      category: 'Advanced',
-      date: '14/07/2025',
-      readTime: 12,
-    },
-    {
-      id: 4,
-      title: 'Building Responsive UIs',
-      description: 'Create responsive web applications that work seamlessly across all device sizes. Learn mobile-first design principles.',
-      category: 'Features',
-      date: '14/07/2025',
-      readTime: 10,
-    },
-    {
-      id: 5,
-      title: 'Performance Optimization',
-      description: 'Improve your React application performance using code splitting, lazy loading, and memoization techniques.',
-      category: 'Advanced',
-      date: '14/07/2025',
-      readTime: 9,
-    },
-    {
-      id: 6,
-      title: 'Component Testing',
-      description: 'Write robust tests for your React components using Jest and React Testing Library. Learn testing best practices.',
-      category: 'Testing',
-      date: '14/07/2025',
-      readTime: 11,
-    },
-  ];
 
   return (
     <div className="h-full">
